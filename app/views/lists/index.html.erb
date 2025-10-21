@@ -1,3 +1,20 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <%= image_tag "popcorn.png", alt: "Popcorn", width: 30, height: 24, class: "d-inline-block align-text-top" %>
+      Watch List
+    </a>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">My Lists</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">New List</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <ul>
   <% @lists.each do |list| %>
     <li><%= list.name %></li>
