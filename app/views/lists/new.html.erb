@@ -7,13 +7,12 @@
 
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">My Lists</a>
+        <%= link_to "My Lists", lists_path, class: "nav-link active", aria: { current: "page" } %>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">New List</a>
+        <%= link_to "New List", new_list_path, class: "nav-link active", aria: { current: "page" } %>
       </li>
     </ul>
-
   </div>
 </nav>
 
@@ -28,6 +27,7 @@
       <%= simple_form_for @list do |f| %>
         <div class="mb-3">
           <%= f.input :name %>
+          <%= f.input :image_url, as: :url, placeholder: "Enter image URL" %>
         </div>
         <%= f.submit "Create List", class: "btn btn-primary" %>
       <% end %>

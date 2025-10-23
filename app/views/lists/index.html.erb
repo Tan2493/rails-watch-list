@@ -1,15 +1,16 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <%= image_tag "popcorn.png", alt: "Popcorn", width: 30, height: 24, class: "d-inline-block align-text-top" %>
-      Watch List
+<nav class="navbar navbar-expand-lg" style="background-color: #cac4c4ff;">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <%= image_tag "popcorn.png", alt: "Popcorn", style: "height: 50px;" %>
+      <span class="ms-2">Watch List</span>
     </a>
-    <ul class="nav justify-content-end">
+
+    <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">My Lists</a>
-        </li>
+        <%= link_to "My Lists", lists_path, class: "nav-link active", aria: { current: "page" } %>
+      </li>
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">New List</a>
+        <%= link_to "New List", new_list_path, class: "nav-link active", aria: { current: "page" } %>
       </li>
     </ul>
   </div>
